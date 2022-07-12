@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --dark-color:#19283f;
+    --grean:#33d1cc;
+    --red-color:#ff3150;
+    --yellow:#ffc400;
+    --section-color:#eff7fa;
+}
+.main-btn{
+    background-color: var(--red-color);
+    padding: 0.5rem 1rem;
+    color:var(--yellow);
+    /* color:var(--yellow) */
+    transition: 0.4s;
+}
+.main-btn:hover,
+.main-btn:focus,
+.main-btn:active{
+    background-color: #fff;
+    color:var(--grean);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 5000px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* start title*/
+ .main-title::after{
+    content: "";
+    border-bottom:2px solid var(--grean) ;
+    width: 130px ;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--grean);
+    
+}
+/* end title*/
+/* start nav */
+.navbar{
+background-color: var(--dark-color);
+text-transform:capitalize;
+
+}
+.navbar .navbar-nav .nav-item a{
+    color:white;
+    /* text-transform:capitalize; */
+}
+.navbar .navbar-nav .nav-item a:hover,
+.navbar .navbar-nav .nav-item a:focus,
+.navbar .navbar-nav .nav-item a:active{
+    color: #7ac9d1;
+
+}
+.search{
+    color:var(--grean);
+    border-left:2px solid var(--grean);
+}
+.button{
+    color: #fff;
+}
+.navbar .navbar-toggler{
+    color:#fff;
+    font-size:25px;
+    border-color: #fff;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+/* end nav */
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+/* end landing */
+/* start features */
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder svg{
+    left:50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color:var(--section-color)
+}
+.features .icon-holder .icon{
+    color:var(--grean);
+    /* position: absolute; */
+    
+}
+.features .feat h4{
+    color:var(--yellow)
+
+}
+/* end features */
+/* start ourWork*/
+.ourWork{
+    background-color: var(--section-color);
+}
+.ourWork ul {
+    text-decoration: none;
+
+}
+.ourWork ul li{
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+.ourWork ul li.active{
+    background-color: var(--red-color);
+    color: var(--yellow);
+    border-radius: 50rem;
+}
+.ourWork ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.ourWork .box{
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.ourWork .box::before{
+    content: attr(data-work);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grean);
+    opacity: 0.77;
+    position: absolute;
+    left: 5PX;
+    bottom: 5PX;
+    transform: translateX(calc(-100% - 5px));
+    width: calc(100% - 10PX);
+    height: calc(100% - 10PX);
+    transition: 0.35s;
+}
+.ourWork .box:hover::before{
+    transform: translateX(0);
+}
+.ourWork .main-btn:hover,.Stuff .main-btn:hover,
+.Blog .main-btn:hover
+{
+    background-color: var(--dark-color);
+    color:#fff;
+}
+
+/* end ourWork */
+/* start Stuff */
+.Stuff .description{
+    width:400px ;
+}
+/* end Stuff */
+/* start ourTeam */
+.ourTeam{
+    background-color: var(--section-color);
+}
+.ourTeam .title{
+    color: var(--yellow);
+}
+.ourTeam .box h2{
+background-color: var(--grean);
+/* color: #fff; */
+margin: 0;
+}
+/* .ourTeam .box p{
+
+} */
+/* end ourTeam */
+.project{
+    background-color: var(--dark-color);
+}
+
+.Subscribe{
+    background-color: var(--yellow);
+}
+.Subscribe  input[type='email']{
+    border:none;
+    outline: none;
+    border-bottom: 2px solid var(--dark-color);
+}
+.Subscribe  input[type='email']::placeholder{
+   color: #fff;
+}
+.Subscribe-btn{
+    background-color: var(--dark-color);
+    color: var(--yellow);
+}
+
+/* start footer */
+footer{
+    background-color: var(--dark-color);
+}
+footer .copyright div:first-child span{
+    color: var(--grean);
+}
+footer .copyright div:last-child span{
+    color: var(--red-color);
+}
+.facebook{
+    background-color: #1877f2;
+}
+.twitter{
+    background-color: #1da1f2;
+}
+.youtube{
+    background-color: #ff0000;
+}
+.linkedin{
+    background-color: #0077b5;
+}
+.icon a {
+    width: 25px;
+    height: 25px;
+}
